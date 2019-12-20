@@ -1,9 +1,10 @@
 package com.bigkoo.pickerview.builder;
 
 import android.content.Context;
-import android.support.annotation.ColorInt;
+import androidx.annotation.ColorInt;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TimePicker;
 
 import com.bigkoo.pickerview.configure.PickerOptions;
 import com.bigkoo.pickerview.listener.CustomListener;
@@ -226,6 +227,11 @@ public class TimePickerBuilder {
         return this;
     }
 
+    public TimePickerBuilder setCycle(boolean cycle) {
+        mPickerOptions.cyclic = cycle;
+        return this;
+    }
+
     /**
      * 设置分割线之间的文字的颜色
      *
@@ -281,7 +287,7 @@ public class TimePickerBuilder {
      * @param x_offset_hours   时
      * @param x_offset_minutes 分
      * @param x_offset_seconds 秒
-     * @return
+     * @return Builder itself
      */
     public TimePickerBuilder setTextXOffset(int x_offset_year, int x_offset_month, int x_offset_day,
                                             int x_offset_hours, int x_offset_minutes, int x_offset_seconds) {

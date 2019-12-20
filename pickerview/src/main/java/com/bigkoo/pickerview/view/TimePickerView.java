@@ -43,7 +43,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
 
             //顶部标题
-            TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
+            /*TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
             RelativeLayout rv_top_bar = (RelativeLayout) findViewById(R.id.rv_topbar);
 
             //确定和取消按钮
@@ -70,7 +70,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             //设置文字大小
             btnSubmit.setTextSize(mPickerOptions.textSizeSubmitCancel);
             btnCancel.setTextSize(mPickerOptions.textSizeSubmitCancel);
-            tvTitle.setTextSize(mPickerOptions.textSizeTitle);
+            tvTitle.setTextSize(mPickerOptions.textSizeTitle);*/
 
         } else {
             mPickerOptions.customListener.customLayout(LayoutInflater.from(context).inflate(mPickerOptions.layoutRes, contentContainer));
@@ -245,10 +245,11 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
      * @param text 标题文本内容
      */
     public void setTitleText(String text) {
-        TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
+        throw new RuntimeException("Stub!");
+        /*TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
         if (tvTitle != null) {
             tvTitle.setText(text);
-        }
+        }*/
     }
 
     /**
